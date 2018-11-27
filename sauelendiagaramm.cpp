@@ -5,15 +5,14 @@ int main()
 {
 	int za[5] = { 0 };
 
-
-		for (int z = 0; z <= 4; z++)
+	for (int z = 0; z <= 4; z++)
+	{
+		do
 		{
-			do
-			{
-				cout << "Bitte geben Sie die " << z + 1 << ". Zahl ein : ? ";
-				cin >> za[z];
-			} while ((za[z] <= 1) || (za[z] >= 9));
-		}
+			cout << "Bitte geben Sie die " << z + 1 << ". Zahl ein : ? ";
+			cin >> za[z];
+		} while ((za[z] < 1) || (za[z] > 9));
+	}
 
 	for (int i = 9; i >= 1; i--) // Schleife um 9-1 auszugeben
 	{
@@ -21,19 +20,19 @@ int main()
 
 		for (int k = 0; k <= 4; k++)
 		{
-			if (i < za[k]) // array  za[0]....[1]....[4] über k
-				cout << "+"; 
+			if (i < za[k]) // array  za[0]....[1]....[4] ï¿½ber k
+				cout << "+";
 
 			if (i > za[k])
 				cout << ".";
 
 			if (i == za[k])
 				cout << "*";
-			
+
 		}
 		cout << endl;
 
-		if (i == 1) // für untere Ausgabe
+		if (i == 1) // fuer untere Ausgabe
 		{
 			cout << " 12345" << endl;
 		}
