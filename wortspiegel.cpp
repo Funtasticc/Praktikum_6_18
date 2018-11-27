@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-void wortspiegel(string &text, int pos)
+void wortspiegel(string &text, int pos) // Was ist "&" bzw. wofür? FRAGEN
 {
 	int posLinks = 0, posRechts = 0, counter = 0;
 	string tmp = text;
