@@ -5,13 +5,14 @@ void writeOut(string myString, int position) // Funktion um String anzuzeigen //
 {
 	bool foundPosition = false; // Wahrheit ob Position gefunden, oder nicht
 	cout << myString << endl; // eingegebenen String anzeigen "myString"
-	for (int i = 0; i < myString.length(); i++) // Schleife läuft solange bis "myString" Länge erreicht
+	for (int i = 0; i < myString.length(); i++) // Schleife lÃ¤uft solange bis "myString" LÃ¤nge erreicht
 	{
 		if (position < 0) {} 
-		else if (i == position) // wenn die Schleife (i) mit der Position übereinstimmt, wird ein "*" ausgegeben um die Position anzuzeigen
+		else if (i == position) // wenn die Schleife (i) mit der Position Ã¼bereinstimmt, wird ein "*" ausgegeben um die Position anzuzeigen
 		{
 			cout << "*" << endl;
 			foundPosition = true;
+			break;
 		}
 		else if (!foundPosition) cout << " ";
 	}
@@ -23,7 +24,7 @@ int getCommand() // Funktion um Befehle anzuzeigen und einzulesen
 	cout << "Befehl (l: links, r: rechts, s: spiegeln, q: Ende) ?- ";
 	cin >> myChar;
 	cout << endl;
-	return myChar; // char wird an myCommand per rückgabewert weitergegeben
+	return myChar; // char wird an myCommand per rÃ¼ckgabewert weitergegeben
 }
 
 int main()
@@ -38,7 +39,7 @@ int main()
 	do
 	{
 		writeOut(myString, stringPosition); // Funkt
-		myCommand = getCommand(); // Rückgabewert von Funktion für "myCommand" nutzen
+		myCommand = getCommand(); // RÃ¼ckgabewert von Funktion fÃ¼r "myCommand" nutzen
 
 		if (myCommand == 'l')
 		{
